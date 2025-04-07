@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Row, Col, Card, Button } from "react-bootstrap";
 import * as db from "../Database";
 import { toggleShowAllCourses, enrollInCourse, unenrollFromCourse } from "../../reducers/enrollmentReducer";
-
+import reactImage from '../assets/reactjs.jpg';
 export default function Dashboard({
     courses,
     course,
@@ -73,7 +73,7 @@ export default function Dashboard({
                 {displayedCourses.map((course) => (
                     <Col key={course._id}>
                         <Card>
-                            <Card.Img variant="top" src="/images/reactjs.jpg" />
+                            <Card.Img variant="top" src={reactImage} />
                             <Card.Body>
                                 <Card.Title>{course.name}</Card.Title>
                                 <Card.Text>{course.description}</Card.Text>
